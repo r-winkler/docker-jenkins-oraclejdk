@@ -15,6 +15,9 @@ The following additional software is installed:
 * curl
 * wget
 * iputils-ping
+* Docker binaries
+* Docker compose
+* Docker machine
 * Jenkins Plugins
 	* greenballs
 
