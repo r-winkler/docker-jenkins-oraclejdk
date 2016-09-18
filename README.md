@@ -1,6 +1,6 @@
 # Jenkins 
 
-This is a docker Jenkins container based on my ubuntu-oraclejdk image.
+This is a Docker Jenkins container based on my ubuntu-oraclejdk image. The Jenkins uses Docker from the underlying Docker host and thus can create, start, push etc. Docker images.
 
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
 
@@ -18,13 +18,8 @@ The following additional software is installed:
 * Jenkins Plugins
 	* greenballs
 
-
-## Installation
-
-```
-docker pull renewinkler/jenkins-oraclejdk
-```
-
+	
+	
 ## Build
 
 ```
@@ -35,7 +30,7 @@ docker build . -t jenkins-oraclejdk
 ## Launch
 
 ```
-docker run -itd -p 8080:8080 --name jenkins renewinkler/jenkins-oraclejdk
+docker run -itd -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name jenkins renewinkler/jenkins-oraclejdk
 ```
 
 
